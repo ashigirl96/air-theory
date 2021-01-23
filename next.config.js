@@ -1,5 +1,10 @@
 require("dotenv").config();
+const path = require('path');
 
 module.exports = {
-  assetPrefix: process.env.GITHUB_PAGES ? "/air-theory" : "",
+  baseUrl: "/air-theory",
+  assetPrefix: "/air-theory",
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
+  },
 };
